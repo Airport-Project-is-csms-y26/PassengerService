@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <ItemGroup>
+        <ProjectReference Include="..\Application\PassengerService.Application\PassengerService.Application.csproj"/>
+        <ProjectReference Include="..\Infrastructure\PassengerService.Infrastructure.Persistence\PassengerService.Infrastructure.Persistence.csproj"/>
+        <ProjectReference Include="..\Presentation\PassengerService.Presentation.Grpc\PassengerService.Presentation.Grpc.csproj"/>
+        <ProjectReference Include="..\Presentation\PassengerService.Presentation.Kafka\PassengerService.Presentation.Kafka.csproj"/>
+        <ProjectReference Include="..\Presentation\PassengerService.Presentation.TicketGrpcClient\PassengerService.Presentation.TicketGrpcClient.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Update="appsettings.*.json">
+            <DependentUpon>appsettings.json</DependentUpon>
+        </Content>
+    </ItemGroup>
+
+</Project>

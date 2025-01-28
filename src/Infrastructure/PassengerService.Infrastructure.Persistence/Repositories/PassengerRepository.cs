@@ -35,8 +35,7 @@ public class PassengerRepository : IPassengerRepository
             },
         };
 
-        await using NpgsqlDataReader dataReader = await command.ExecuteReaderAsync(cancellationToken);
-        await dataReader.ReadAsync(cancellationToken);
+        await command.ExecuteNonQueryAsync(cancellationToken);
     }
 
     public async Task BanPassenger(long id, CancellationToken cancellationToken)
